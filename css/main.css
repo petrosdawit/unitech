@@ -1,0 +1,15 @@
+.navbar {
+  font-size: 35px;
+}
+
+.navbar-header {
+  padding-right: 150px;
+}
+
+.container{
+  margin: 10px;
+}
+
+.row{
+  margin:15px;
+}
