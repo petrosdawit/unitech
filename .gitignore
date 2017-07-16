@@ -1,3 +1,10 @@
 .gitignore
 node_modules
+css
+js
+fonts
+client/css
+client/js
+client/less
+client/lib
 data/nonProfits.db
