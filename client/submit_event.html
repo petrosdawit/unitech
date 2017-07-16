@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,33 +73,39 @@
       <p style="color: blue; padding-top: 30px">If you would like to submit a technical education nonprofit that's not already listed, submit this form for approval.
         Submission of this form does not guarantee your entry will be accepted into unitech's database. </p>
 
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <form name="submit_event" onsubmit="handle_submit_event()" action="#">
+          <!-- <div class="form-group">
+            <label for="nonprofitEmail">Email address</label>
+            <input type="email" class="form-control" id="nonprofitEmail" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
+          </div> -->
           <div class="form-group">
-            <label for="Nonprofit-name">Nonprofit name</label>
-            <input type="text" class="form-control" id="Example-Nonprofit-name" placeholder="Enter nonprofit name">
+            <label for="nonprofitName">Nonprofit name</label>
+            <input type="text" class="form-control" id="nonprofitName" placeholder="Enter nonprofit name">
           </div>
           <div class="form-group">
             <label for="websiteLink">Link to website</label>
-            <input type="text" class="form-control" id="exampleWebsiteLink" placeholder="Enter website Link">
+            <input type="text" class="form-control" id="websiteLink" placeholder="Enter website Link">
           </div>
           <div class="form-group">
             <label for="location">Location(s)</label>
-            <input type="text" class="form-control" id="exampleLocation" placeholder="Enter location">
+            <input type="text" class="form-control" id="location" placeholder="Enter location">
           </div>
           <div class="form-group">
-            <label for="exampleDescription">Program Description</label>
-            <textarea class="form-control" id="exampleDescription" rows="3" placeholder="Enter description"></textarea>
+            <label for="description">Program Description</label>
+            <textarea class="form-control" id="description" rows="3" placeholder="Enter description"></textarea>
           </div>
           <div class="form-group">
             <label for="cost">Program Cost</label>
-            <input type="text" class="form-control" id="exampleCost" placeholder="Enter program cost">
+            <input type="text" class="form-control" id="cost" placeholder="Enter program cost">
           </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+          <div class="form-group">
+            <label for="keywords">Keywords</label>
+            <input type="text" class="form-control" id="keywords" placeholder="Enter 3 keywords">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
@@ -115,6 +120,11 @@
 
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="../js-priority-queue-master/priority-queue.js"></script>
+
+    <script src="js/submit_event.js"></script>
 
 </body>
 
