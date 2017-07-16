@@ -123,5 +123,7 @@ function makeApproved(data){
 	};
 	var updates = {};
 	updates['/nonProfits/' + data['id']] = postData;
-	return firebase.database().ref().update(updates);
+	firebase.database().ref().update(updates);
+	location.reload();
+
 }
