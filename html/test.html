@@ -96,7 +96,20 @@
 			});
 		}
 
-		// getNonApproved();
+		function getApproved(data){
+			return firebase.database().ref('nonProfits').once('value').then(function(snapshot) {
+				var data = snapshot.val();
+				var output = [];
+				for(var _id in data){
+					if (data[_id]['approved']){
+						output.push(data[_id]);
+					}
+				}
+				console.log(output);
+				return output;
+			});
+		}
+		getApproved();
 
 		function makeApproved(data){
 			var postData = {
@@ -115,8 +128,6 @@
 			updates['/nonProfits/' + data['id']] = postData;
 			return firebase.database().ref().update(updates);
 		}
-
-		searchData('MATH');
 
 		function writeToFirebaseFromCSV(){
 			writeNonProfitData('Silicon Valley Education Foundation','http://www.svefoundation.org/', 'A nonprofit resource and advocate for students and educators, SVEF is dedicated to putting all students on track for college and careers, focusing on the critical areas of science, technology, engineering, and math (STEM).', 'FREE','MATH','SUMMER COURSES', '', 'SAN JOSE', '1');
