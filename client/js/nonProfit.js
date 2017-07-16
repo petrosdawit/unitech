@@ -1,8 +1,5 @@
 window.addEventListener('load', function(){
-	console.log('we here');
-	setTimeout( function(){
-		getApproved();
-	}, 1000);
+	getApproved();
 }, false);
 
 // Initialize Firebase
