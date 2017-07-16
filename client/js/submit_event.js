@@ -72,4 +72,6 @@ function handle_submit_event() {
   writeNonProfitData(nonprofit_name, website_link, description, cost,
                      keywords[0], keywords[1], keywords[2], location, 0);
 
+  alert("You have submitted succesful!")
+
 }
