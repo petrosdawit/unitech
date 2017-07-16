@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="js/admin.js"></script>
 
     <!-- Theme CSS -->
     <link href="css/new-age.min.css" rel="stylesheet">
@@ -81,23 +83,11 @@
               <h2 class="text-center">Admin: Tech Non-Profits in the Bay Area</h2>
               <table class="table table-bordered table-striped">
 
-            <!--SEARCH BAR-->
-              <form action="" class="navbar-form navbar-right">
-                <div class="input-group">
-                    <input type="Search" placeholder="Search with key words..." class="form-control" />
-                     <div class="input-group-btn">
-                          <button class="btn btn-info">
-                          <span class="glyphicon glyphicon-search"></span>
-                         </button>
-                     </div>
-                 </div>
-            </form>
 
     <!--TABLE-->
     <thead>
       <tr>
         <th>Name</th>
-        <th>Link</th>
         <th>Description</th>
         <th>Cost</th>
         <th>Keywords</th>
@@ -106,63 +96,8 @@
         <th>Deny</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Silicon Valley Education Foundation</td>
-        <td><a href="www.svefoundation.org/">www.svefoundation.org/</a></td>
-        <td>A nonprofit resource and advocate for students and educators, SVEF is dedicated to putting all students on track for college and careers, focusing on the critical areas of science, technology, engineering, and math (STEM). </td>
-        <td>Free</td>
-        <td>MATH, SUMMER COURSES</td>
-        <td>San Jose</td>
-        <td>
-        <button type="button" class="btn btn-default" aria-label="Ok">
-          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        </button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-default" aria-label="No">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
-        </td>
-      </tr>
+    <tbody class = 'listContainer'>
 
-      <tr>
-        <td>The Hidden Genius Object</td>
-        <td><a href="www.hiddengeniusproject.org/">www.hiddengeniusproject.org/</a></td>
-        <td>The Hidden Genius Project seeks to reveal the true potential of black male youth and transform their communities from the inside out. Through our student-centered, project-based approach, we invest in young black men, give them access to technology training, and plug them into an ecosystem of  innovation and empowerment.</td>
-        <td>Free</td>
-        <td>INTRO TO CS, BOOTCAMP, ENTREPRENEURS</td>
-        <td>Oakland</td>
-        <td>
-        <button type="button" class="btn btn-default" aria-label="Ok">
-          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        </button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-default" aria-label="No">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Black Girls Code</td>
-        <td><a href="www.blackgirlscode.com/">http://www.blackgirlscode.com/</a></td>
-        <td>Their goal is to increase the number of women of color in the digital space by empowering girls of color ages 7 to 17 to become innovators in STEM fields, leaders in their communities, and builders of their own futures through exposure to computer science and technology. </td>
-        <td>Free/Financial Aid Available</td>
-        <td>HACKATHON, BOOTCAMP, </td>
-        <td>Oakland (Multiple Locations)</td>
-        <td>
-        <button type="button" class="btn btn-default" aria-label="Ok">
-          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        </button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-default" aria-label="No">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
-        </td>
-      </tr>
 
     </tbody>
   </table>
