@@ -72,7 +72,7 @@ function handle_admin_approval() {
 
 }
 
-function getNonApproved(data){
+function getNonApproved(){
 	return firebase.database().ref('nonProfits').once('value').then(function(snapshot) {
 		var data = snapshot.val();
 		var output = [];
@@ -81,15 +81,16 @@ function getNonApproved(data){
 				output.push(data[_id]);
 			}
 		}
-		console.log(output);
-		for (var i in output){
+		console.log(output[0]);
+		for (var i in output){ 
 			string = '<tr> ' +
 			'<td><a href="' + output[i]['link'] + '">' + output[i]['name'] + '</a></td>' + 
 			'<td>' + output[i]['description'] + '</td>' +
 			'<td>' + output[i]['cost'] + '</td>' +
 			'<td>' + output[i]['keyword1'] + ',' + output[i]['keyword2'] + ',' + output[i]['keyword3'] + '</td>' + '<td>' + output[i]['location'] + '</td>' +
 	        '<td> ' +
-	        '<button type="button" class="btn btn-default" aria-label="Ok"> ' +
+
+	        '<button type="button" class="btn btn-default" aria-label="Ok" onclick=\'makeApproved(' + JSON.stringify(output[i]) +');\'> ' +
 	        	'<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' +
 	        '</button> ' +
 	        '</td> ' +
@@ -100,13 +101,14 @@ function getNonApproved(data){
 	        '</td> ' +	
 			'</tr>'
 
-			$(".listContainer").append(string);	
+			$(".listContainer").append(string);
 		}
 		// return output;
 	});
 }
 
 function makeApproved(data){
+	console.log(data);
 	var postData = {
 		id: data['id'],
 		name: data['name'],
