@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>List of Nonprofits</title>
+    <title>unitech</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,13 +26,6 @@
 
     <!-- Theme CSS -->
     <link href="css/new-age.min.css" rel="stylesheet">
-  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-  <script src="../js-priority-queue-master/priority-queue.js"></script>
-  <script src="js/nonProfit.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,7 +78,7 @@
           <div class="col-md-1"></div>
           <div class="col-md-10">
             <div class="jumbotron">
-              <h2 class="text-center">Tech Non-Profits in the Bay Area</h2>
+              <h2 class="text-center">Admin: Tech Non-Profits in the Bay Area</h2>
               <table class="table table-bordered table-striped">
 
             <!--SEARCH BAR-->
@@ -104,21 +97,35 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>Link</th>
         <th>Description</th>
         <th>Cost</th>
         <th>Keywords</th>
         <th>Location</th>
+        <th>Approve</th>
+        <th>Deny</th>
       </tr>
     </thead>
-    <tbody class = 'listContainer'>
-<!--       <tr>
+    <tbody>
+      <tr>
         <td>Silicon Valley Education Foundation</td>
         <td><a href="www.svefoundation.org/">www.svefoundation.org/</a></td>
         <td>A nonprofit resource and advocate for students and educators, SVEF is dedicated to putting all students on track for college and careers, focusing on the critical areas of science, technology, engineering, and math (STEM). </td>
         <td>Free</td>
         <td>MATH, SUMMER COURSES</td>
         <td>San Jose</td>
+        <td>
+        <button type="button" class="btn btn-default" aria-label="Ok">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-default" aria-label="No">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        </td>
       </tr>
+
       <tr>
         <td>The Hidden Genius Object</td>
         <td><a href="www.hiddengeniusproject.org/">www.hiddengeniusproject.org/</a></td>
@@ -126,7 +133,18 @@
         <td>Free</td>
         <td>INTRO TO CS, BOOTCAMP, ENTREPRENEURS</td>
         <td>Oakland</td>
+        <td>
+        <button type="button" class="btn btn-default" aria-label="Ok">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-default" aria-label="No">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        </td>
       </tr>
+
       <tr>
         <td>Black Girls Code</td>
         <td><a href="www.blackgirlscode.com/">http://www.blackgirlscode.com/</a></td>
@@ -134,7 +152,18 @@
         <td>Free/Financial Aid Available</td>
         <td>HACKATHON, BOOTCAMP, </td>
         <td>Oakland (Multiple Locations)</td>
-      </tr> -->
+        <td>
+        <button type="button" class="btn btn-default" aria-label="Ok">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-default" aria-label="No">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        </td>
+      </tr>
+
     </tbody>
   </table>
             </div>
