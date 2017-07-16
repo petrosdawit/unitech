@@ -81,7 +81,6 @@ function getNonApproved(){
 				output.push(data[_id]);
 			}
 		}
-		console.log(output[0]);
 		for (var i in output){ 
 			string = '<tr> ' +
 			'<td><a href="' + output[i]['link'] + '">' + output[i]['name'] + '</a></td>' + 
@@ -95,7 +94,7 @@ function getNonApproved(){
 	        '</button> ' +
 	        '</td> ' +
 	        '<td> ' +
-	        	'<button type="button" class="btn btn-default" aria-label="No"> ' +
+	        	'<button type="button" class="btn btn-default" aria-label="No" onclick=\'reject(' + JSON.stringify(output[i]) +');\'> ' +
 	        	'<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> ' +
 	        '</button> ' +
 	        '</td> ' +	
@@ -125,5 +124,14 @@ function makeApproved(data){
 	updates['/nonProfits/' + data['id']] = postData;
 	firebase.database().ref().update(updates);
 	location.reload();
-
 }
+
+function reject(data){
+	console.log(data);
+	firebase.database().ref().child('/nonProfits/' + data['id']).remove();
+	location.reload();	
+}
+
+
+
+
